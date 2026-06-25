@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة المستثمر - تسوية زيادة رأس المال</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .step-content { display: none; }
+        .step-content.active { display: block; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo">MCDR</div>
+                <div class="header-title">تسوية زيادة رأس المال - مصر المقاصة</div>
+            </div>
+            <a href="index.html" class="btn btn-secondary" style="text-decoration: none;">تسجيل الخروج</a>
+        </header>
+
+        <main class="main-content">
+            <div class="dashboard-layout">
+                <aside class="sidebar">
+                    <h3 class="sidebar-title">خطوات التسوية</h3>
+                    <div class="steps">
+                        <button class="step-btn active" onclick="showStep('company', this)">
+                            <div class="step-icon">1</div>
+                            <span>بيانات الشركة</span>
+                        </button>
+                        <button class="step-btn" onclick="showStep('delegate', this)">
+                            <div class="step-icon">2</div>
+                            <span>بيانات المفوض</span>
+                        </button>
+                        <button class="step-btn" onclick="showStep('capital', this)">
+                            <div class="step-icon">3</div>
+                            <span>استكمال رأس المال</span>
+                        </button>
+                    </div>
+                </aside>
+
+                <div class="dashboard-content-area">
+                    <div class="card">
+                        
+                        <!-- Step 1: Company -->
+                        <div id="company" class="step-content active">
+                            <h3 class="card-title">بيانات الشركة</h3>
+                            <div class="grid">
+                                <div class="form-group">
+                                    <label class="form-label">اسم الشركة</label>
+                                    <input type="text" class="form-input" value="شركة النيل للبرمجيات" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">رقم التسجيل</label>
+                                    <input type="text" class="form-input" value="123456" disabled>
+                                </div>
+                            </div>
+                            <div style="margin-top: 2rem; text-align: left;">
+                                <button class="btn btn-primary" onclick="document.querySelectorAll('.step-btn')[1].click()">التالي &larr;</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Delegate -->
+                        <div id="delegate" class="step-content">
+                            <h3 class="card-title">بيانات المفوض</h3>
+                            <div class="grid">
+                                <div class="form-group">
+                                    <label class="form-label">الاسم</label>
+                                    <input type="text" class="form-input" value="أحمد محمد" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">الرقم القومي</label>
+                                    <input type="text" class="form-input" value="29012345678901" disabled>
+                                </div>
+                            </div>
+                            <div style="margin-top: 2rem; display: flex; justify-content: space-between;">
+                                <button class="btn btn-secondary" onclick="document.querySelectorAll('.step-btn')[0].click()">&rarr; السابق</button>
+                                <button class="btn btn-primary" onclick="document.querySelectorAll('.step-btn')[2].click()">التالي &larr;</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Capital -->
+                        <div id="capital" class="step-content">
+                            <h3 class="card-title">تسوية زيادات رأس المال</h3>
+                            
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; background: #fff; padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+                                <div>
+                                    <span style="color: var(--text-light); margin-right: 10px;">الرسوم المستحقة: </span> 
+                                    <span class="status-badge status-pending">5000 ج.م</span>
+                                </div>
+                                <div>
+                                    <span style="color: var(--text-light); margin-right: 10px;">حالة الطلب: </span> 
+                                    <span class="status-badge status-pending">انتظار الدفع</span>
+                                </div>
+                            </div>
+
+                            <div style="background: #fffbeb; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #fcd34d;">
+                                <strong style="color: #b45309; font-size: 1.1rem;">ملاحظات المراجع: </strong>
+                                <p style="margin: 0.75rem 0 0 0; color: #92400e; line-height: 1.6;">يرجى إرفاق محضر الجمعية بشكل واضح وإعادة رفع الشهادة البنكية.</p>
+                            </div>
+
+                            <div id="increases-container">
+                                <div class="increase-section">
+                                    <h4 style="margin-bottom: 1.5rem; color: var(--primary); font-size: 1.3rem; display: flex; align-items: center; gap: 0.5rem;">
+                                        <span style="width: 8px; height: 8px; background: var(--accent); border-radius: 50%; display: inline-block;"></span>
+                                        الزيادة رقم 1
+                                    </h4>
+                                    <div class="grid" style="margin-bottom: 2rem;">
+                                        <div class="form-group">
+                                            <label class="form-label">طريقة الزيادة</label>
+                                            <select class="form-select">
+                                                <option>نقدي</option>
+                                                <option>أسهم مجانية</option>
+                                                <option>أرصدة دائنة</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">قيمة الزيادة</label>
+                                            <input type="number" class="form-input" placeholder="أدخل القيمة بالجنيه">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">رأس المال بعد الزيادة</label>
+                                            <input type="number" class="form-input" placeholder="إجمالي رأس المال">
+                                        </div>
+                                    </div>
+
+                                    <h5 style="margin-bottom: 1.5rem; color: var(--text); font-size: 1.1rem;">المرفقات المطلوبة</h5>
+                                    <div class="grid">
+                                        <div class="form-group">
+                                            <label class="form-label">محضر الجمعية</label>
+                                            <div class="file-input-wrapper">
+                                                <button class="file-input-btn">إرفاق ملف</button>
+                                                <input type="file">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">العقد المعدل</label>
+                                            <div class="file-input-wrapper">
+                                                <button class="file-input-btn">إرفاق ملف</button>
+                                                <input type="file">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">خطاب الرقابة المالية</label>
+                                            <div class="file-input-wrapper">
+                                                <button class="file-input-btn">إرفاق ملف</button>
+                                                <input type="file">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">قائمة المساهمين</label>
+                                            <div class="file-input-wrapper">
+                                                <button class="file-input-btn">إرفاق ملف</button>
+                                                <input type="file">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">طلب قيد الزيادة</label>
+                                            <div class="file-input-wrapper">
+                                                <button class="file-input-btn">إرفاق ملف</button>
+                                                <input type="file">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">السجل التجارى</label>
+                                            <div class="file-input-wrapper">
+                                                <button class="file-input-btn">إرفاق ملف</button>
+                                                <input type="file">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">الشهادة البنكية</label>
+                                            <div class="file-input-wrapper">
+                                                <button class="file-input-btn">إرفاق ملف</button>
+                                                <input type="file">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="add-btn" onclick="alert('سيكون هذا الزر مفعلاً لإضافة كود المرفق الجديد برمجيًا')" title="إضافة زيادة أخرى">
+                                +
+                            </button>
+                            
+                            <div style="margin-top: 3rem; display: flex; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 2rem;">
+                                <button class="btn btn-secondary" onclick="document.querySelectorAll('.step-btn')[1].click()">&rarr; السابق</button>
+                                <button class="btn btn-primary" style="padding: 1rem 4rem;" onclick="alert('تم حفظ وإرسال الطلب بنجاح!')">
+                                    حفظ وإرسال الطلب
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function showStep(stepId, btn) {
+            document.querySelectorAll('.step-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(stepId).classList.add('active');
+            
+            document.querySelectorAll('.step-btn').forEach(el => el.classList.remove('active'));
+            btn.classList.add('active');
+        }
+    </script>
+</body>
+</html>

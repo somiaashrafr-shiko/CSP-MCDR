@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مراجعة الطلب - مصر المقاصة</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo">MCDR</div>
+                <div class="header-title">تسوية زيادة رأس المال - مصر المقاصة</div>
+            </div>
+            <a href="index.html" class="btn btn-secondary" style="text-decoration: none;">تسجيل الخروج</a>
+        </header>
+
+        <main class="main-content">
+            <div class="dashboard-content-area" style="max-width: 1000px; margin: 0 auto;">
+                <a href="makkasa.html" class="btn btn-secondary" style="margin-bottom: 2rem; text-decoration: none; display: inline-block;">
+                    &rarr; العودة لقائمة الطلبات
+                </a>
+                
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                        <h3 class="card-title" style="margin: 0;">مراجعة طلب: شركة النيل للبرمجيات</h3>
+                        <span id="main-status" class="status-badge status-pending">قيد المراجعة</span>
+                    </div>
+
+                    <div class="grid" style="margin-bottom: 2.5rem; background: var(--primary-light); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border);">
+                        <div>
+                            <label class="form-label">اخر رأس مال مسجل لدي الهيئة العامة للاستثمار</label>
+                            <div class="readonly-value">10,000,000 ج.م</div>
+                        </div>
+                    </div>
+
+                    <div class="increase-section">
+                        <h4 style="margin-bottom: 1.5rem; color: var(--primary);">بيانات تسوية رأس المال</h4>
+                        <div class="grid" style="margin-bottom: 2rem;">
+                            <div>
+                                <label class="form-label">طريقة الزيادة</label>
+                                <div class="readonly-value">نقدي</div>
+                            </div>
+                            <div>
+                                <label class="form-label">قيمة الزيادة</label>
+                                <div class="readonly-value">5,000,000 ج.م</div>
+                            </div>
+                            <div>
+                                <label class="form-label">رأس المال بعد الزيادة</label>
+                                <div class="readonly-value">15,000,000 ج.م</div>
+                            </div>
+                        </div>
+
+                        <h5 style="margin-bottom: 1rem; margin-top: 2.5rem; color: var(--text);">المرفقات المرفوعة</h5>
+                        <div class="grid">
+                            <div style="display: flex; align-items: center; gap: 0.75rem; background: var(--primary-light); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+                                <span style="font-weight: 700;">محضر الجمعية</span>
+                                <a href="#" style="margin-right: auto; color: var(--text-light); text-decoration: underline; font-size: 0.9rem;">عرض</a>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; background: var(--primary-light); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+                                <span style="font-weight: 700;">العقد المعدل</span>
+                                <a href="#" style="margin-right: auto; color: var(--text-light); text-decoration: underline; font-size: 0.9rem;">عرض</a>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; background: var(--primary-light); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+                                <span style="font-weight: 700;">خطاب الرقابة المالية</span>
+                                <a href="#" style="margin-right: auto; color: var(--text-light); text-decoration: underline; font-size: 0.9rem;">عرض</a>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; background: var(--primary-light); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+                                <span style="font-weight: 700;">قائمة المساهمين</span>
+                                <a href="#" style="margin-right: auto; color: var(--text-light); text-decoration: underline; font-size: 0.9rem;">عرض</a>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; background: var(--primary-light); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+                                <span style="font-weight: 700;">طلب قيد الزيادة</span>
+                                <a href="#" style="margin-right: auto; color: var(--text-light); text-decoration: underline; font-size: 0.9rem;">عرض</a>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; background: var(--primary-light); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+                                <span style="font-weight: 700;">السجل التجارى</span>
+                                <a href="#" style="margin-right: auto; color: var(--text-light); text-decoration: underline; font-size: 0.9rem;">عرض</a>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; background: var(--primary-light); padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+                                <span style="font-weight: 700;">الشهادة البنكية</span>
+                                <a href="#" style="margin-right: auto; color: var(--text-light); text-decoration: underline; font-size: 0.9rem;">عرض</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                        <h3 class="card-title" style="font-size: 1.4rem;">إجراءات المراجع</h3>
+                        
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+                            <label class="form-label" style="margin: 0;">نوع الاكتتاب:</label>
+                            <select class="form-select" style="width: 250px;">
+                                <option>عام</option>
+                                <option>مغلق</option>
+                                <option>مجاني</option>
+                            </select>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+                            <label class="form-label" style="margin: 0;">نوع الزيادة:</label>
+                            <select class="form-select" style="width: 250px;">
+                                <option>نقدي</option>
+                                <option>مجاني</option>
+                            </select>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem; background: #ecfdf5; padding: 1rem; border-radius: 8px; border: 1px solid #6ee7b7;">
+                            <input type="checkbox" id="completedCheck" onchange="toggleCompletion(this)" style="width: 24px; height: 24px; cursor: pointer; accent-color: var(--success);">
+                            <label for="completedCheck" style="font-weight: 800; cursor: pointer; font-size: 1.1rem; color: var(--success);">
+                                اعتماد استكمال التسوية (تتحول حالة الطلب إلى مكتمل)
+                            </label>
+                        </div>
+
+                        <div id="actions-group" style="display: flex; gap: 1.5rem;">
+                            <button class="btn btn-primary" onclick="showFeesPanel()">موافق (إدراج رسوم)</button>
+                            <button class="btn btn-secondary" onclick="showEstifaPanel()">إدراج استيفاء (نواقص)</button>
+                        </div>
+
+                        <!-- Fees Panel -->
+                        <div id="fees-panel" class="hidden dashboard-content-area" style="margin-top: 2rem; background: #eef2f6; padding: 1.5rem; border: 1px solid var(--primary); border-radius: 8px;">
+                            <label class="form-label">إدراج رسوم الطلب (ج.م)</label>
+                            <div style="display: flex; gap: 1.5rem;">
+                                <input type="number" class="form-input" placeholder="مثال: 5000">
+                                <button class="btn btn-primary" onclick="changeStatus('انتظار الدفع', 'status-pending')">حفظ الرسوم وإرسال</button>
+                            </div>
+                        </div>
+
+                        <!-- Estifa Panel -->
+                        <div id="estifa-panel" class="hidden dashboard-content-area" style="margin-top: 2rem; background: #fffbeb; padding: 1.5rem; border: 1px solid #fcd34d; border-radius: 8px;">
+                            <label class="form-label" style="color: #b45309;">ملاحظات الاستيفاء</label>
+                            <textarea class="form-input" rows="5" placeholder="أدخل الملاحظات والنواقص لتصل للمستثمر..."></textarea>
+                            <button class="btn btn-secondary" style="margin-top: 1.5rem;" onclick="changeStatus('مطلوب استيفاء', 'status-pending')">إرسال الاستيفاء</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleCompletion(checkbox) {
+            const statusBadge = document.getElementById('main-status');
+            const actions = document.getElementById('actions-group');
+            const feesPanel = document.getElementById('fees-panel');
+            const estifaPanel = document.getElementById('estifa-panel');
+
+            if (checkbox.checked) {
+                statusBadge.textContent = 'مكتمل';
+                statusBadge.className = 'status-badge status-success';
+                actions.classList.add('hidden');
+                feesPanel.classList.add('hidden');
+                estifaPanel.classList.add('hidden');
+            } else {
+                statusBadge.textContent = 'قيد المراجعة';
+                statusBadge.className = 'status-badge status-pending';
+                actions.classList.remove('hidden');
+            }
+        }
+
+        function showFeesPanel() {
+            document.getElementById('fees-panel').classList.remove('hidden');
+            document.getElementById('estifa-panel').classList.add('hidden');
+        }
+
+        function showEstifaPanel() {
+            document.getElementById('estifa-panel').classList.remove('hidden');
+            document.getElementById('fees-panel').classList.add('hidden');
+        }
+
+        function changeStatus(text, className) {
+            const statusBadge = document.getElementById('main-status');
+            statusBadge.textContent = text;
+            statusBadge.className = 'status-badge ' + className;
+            alert('تم حفظ الإجراء وإرسال التحديث للمستثمر بنجاح!');
+        }
+    </script>
+</body>
+</html>
